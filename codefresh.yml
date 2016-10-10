@@ -2,7 +2,7 @@ version: '1.0'
 steps:
   build-docker-image:
     type: build
-    image-name: runeffective/athena
+    image-name: verchol/test
     tag: ${{CF_REVISION}}
 
   unit-test:
@@ -33,5 +33,5 @@ steps:
             - DB_PASS=mysecretpassword
     composition-candidates:
       test-service:
-      image: 'runeffective/athena'
-      command: 'sleep 10'
+        image: 'runeffective/athena'
+        command: 'sleep 10'
