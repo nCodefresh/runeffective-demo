@@ -33,5 +33,5 @@ steps:
             - DB_PASS=mysecretpassword
     composition-candidates:
       test-service:
-        image: 'runeffective/athena'
+        image: 'node:latest'
         command: 'sleep 10'
