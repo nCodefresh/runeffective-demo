@@ -7,7 +7,7 @@ steps:
 
   unit-test:
     type: composition
-    composition: codefresh-demo
+    composition: demotest
     composition-candidates:
       test:
         image: 'node:latest'
