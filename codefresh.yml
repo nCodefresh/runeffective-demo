@@ -32,6 +32,6 @@ steps:
             - REDIS_URL=redis://redis:6379
             - DB_PASS=mysecretpassword
     composition-candidates:
-      test-service:
+      test:
         image: 'node:latest'
         command: 'sleep 10'
