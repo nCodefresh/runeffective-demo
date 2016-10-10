@@ -7,30 +7,7 @@ steps:
 
   unit-test:
     type: composition
-    composition:
-      version: '2.0'
-      services:
-         postgres:
-           image: 'postgres:9.4.5'
-           environment:
-           - POSTGRES_PASSWORD=mysecretpassword
-           - POSTGRES_USER=athenaci
-           - POSTGRES_DB=postgres_test
-         redis:
-           image: 'redis'
-         athena:
-           image: 'node:latest'
-           command: 'exec '
-           depends_on:
-            - redis
-            - postgres
-           environment:
-            - RAILS_ENV=test
-            - DB_NAME=postgres
-            - DB_HOST=postgres
-            - DB_USER=athenaci
-            - REDIS_URL=redis://redis:6379
-            - DB_PASS=mysecretpassword
+    composition: runeffective
     composition-candidates:
       test:
         image: 'node:latest'
